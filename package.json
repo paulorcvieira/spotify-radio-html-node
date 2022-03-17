@@ -1,0 +1,28 @@
+{
+  "name": "spotify-radio",
+  "version": "1.0.0",
+  "description": "Spotify Radio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "start:dev": "nodemon server/index.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache",
+    "test:watch": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache --watchAll",
+    "test:coverage": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --no-cache --coverage tests/unit"
+  },
+  "engines": {
+    "node": "17"
+  },
+  "keywords": [],
+  "author": "Paulo Vieira",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "pino": "^7.8.1",
+    "pino-pretty": "^7.5.3"
+  }
+}
