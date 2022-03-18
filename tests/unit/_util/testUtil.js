@@ -1,7 +1,13 @@
-import { jest } from '@jest/globals'
-import { Readable, Writable } from 'stream'
+import {
+  jest
+} from '@jest/globals'
+import {
+  Readable,
+  Writable
+} from 'stream'
 
 export default class TestUtil {
+
   static generateReadableStream(data) {
     return new Readable({
       read() {
@@ -17,7 +23,9 @@ export default class TestUtil {
   static generateWritableStream(onData) {
     return new Writable({
       write(chunk, enc, cb) {
-        onData(chunk)
+        // fix: adicionei uma funcao opcional
+        onData?.(chunk)
+
         cb(null, chunk)
       }
     })
@@ -25,8 +33,8 @@ export default class TestUtil {
 
   static defaultHandleParams() {
     const requestStream = TestUtil.generateReadableStream(['body da requisicao'])
-    const response = TestUtil.generateWritableStream(() => { })
-
+    // fix: removi a funcao vazia
+    const response = TestUtil.generateWritableStream()
     const data = {
       request: Object.assign(requestStream, {
         headers: {},

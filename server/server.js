@@ -1,4 +1,5 @@
 import { createServer } from 'http'
 import { handler } from './routes.js'
 
-export default createServer(handler)
+// fix: faz com que a instancia seja unica
+export default () => createServer(handler)
