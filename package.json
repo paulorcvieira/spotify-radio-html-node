@@ -2,6 +2,19 @@
   "name": "spotify-radio",
   "version": "1.0.0",
   "description": "Spotify Radio",
+  "keywords": [
+    "spotify-radio",
+    "spotify",
+    "radio",
+    "radio-deck",
+    "controller",
+    "radio-controller"
+  ],
+  "author": {
+    "name": "Paulo Vieira",
+    "repository": "https://github.com/paulorcvieira/spotify-radio-html-node"
+  },
+  "license": "ISC",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,9 +32,6 @@
   "engines": {
     "node": "17"
   },
-  "keywords": [],
-  "author": "Paulo Vieira",
-  "license": "ISC",
   "devDependencies": {
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",

@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Radio - Controller</title>
-  <link rel="stylesheet" href="./controller/css/index.css">
+  <title>Radio Controller - Semana JS Expert 6.0</title>
   <link rel="shortcut icon" type="image/png" href="./controller/assets/spotify-favicon.png" />
+  <link rel="stylesheet" href="./controller/css/index.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
 
@@ -18,16 +18,18 @@
     <section>
       <button class="active command" id="start"> Start Stream </button>
       <button class="active hidden command" id="stop"> Stop Stream </button>
-      <button> Applause </button>
-      <button> Audience Applause </button>
-      <button> Boo! </button>
-      <button> Fart </button>
-      <button> Laughing </button>
-      <button class="unassigned"> Unassigned <br> :( </button>
+      <button name="command"> Applause </button>
+      <button name="command"> Audience Applause </button>
+      <button name="command"> Boo! </button>
+      <button name="command"> Fart </button>
+      <button name="command"> Laughing </button>
+      <button name="command"> Fail </button>
       <button class="unassigned"> Unassigned <br> :( </button>
     </section>
 
   </div>
+
+  <script type="module" src="./controller/js/index.js"></script>
 </body>
 
 </html>
